@@ -1,0 +1,17 @@
+{{#each ideas}}
+  <div class="card card-body mb-2">
+    <h4> Name: {{Name}}</h4>
+    <p>Gender: {{Gender}}</p>
+    <p>Age: {{Age}}</p>
+    <p>Weight: {{Weight}}</p>
+    <p>Height: {{Height}}</p>
+    <a class="btn btn-dark btn-block mb-2" href="/ideas/edit/{{id}}">Edit</a>
+    <form method="post" action="/ideas/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+  </div>
+{{else}}
+  <p>No Calorie Data Listed</p>
+{{/each}}
+
