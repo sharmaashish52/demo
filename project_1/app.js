@@ -43,6 +43,11 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+// Calorie Calculator Route
+app.get('/calculateCalorie', (req, res) => {
+  res.render('calc');
+});
+
 // Idea Index Page
 app.get('/ideas', (req, res) => {
   Idea.find({})
